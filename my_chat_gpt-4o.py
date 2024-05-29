@@ -3,13 +3,16 @@
 
 # ### Preguntas y Respuestas con ChatGPT 4o
 
-# In[ ]:
+# In[2]:
 
 
+#!pip install openai
+#!pip install streamlit
+#!pip install streamlit openai
+#!pip install python-dotenv
 
 
-
-# In[ ]:
+# In[3]:
 
 
 import openai
