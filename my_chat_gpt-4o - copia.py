@@ -3,8 +3,11 @@
 
 # ### Preguntas y Respuestas con ChatGPT 4o
 
+<<<<<<< HEAD
 # In[2]:
 
+=======
+>>>>>>> 160be347e470d23eb1b28adc640c7c23d0494a52
 
 #!pip install openai
 #!pip install streamlit
@@ -12,13 +15,17 @@
 #!pip install python-dotenv
 
 
+<<<<<<< HEAD
 # In[3]:
 
 
+=======
+>>>>>>> 160be347e470d23eb1b28adc640c7c23d0494a52
 import openai
 import streamlit as st
 import os
 
+<<<<<<< HEAD
 
 # In[ ]:
 
@@ -29,6 +36,8 @@ import os
 # In[ ]:
 
 
+=======
+>>>>>>> 160be347e470d23eb1b28adc640c7c23d0494a52
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -37,18 +46,24 @@ MyAPIKey = os.getenv('OPENAI_API_KEY')
 
 openai.api_key = MyAPIKey
 
+<<<<<<< HEAD
 
 # In[ ]:
 
 
+=======
+>>>>>>> 160be347e470d23eb1b28adc640c7c23d0494a52
 def is_goodbye(message):
     goodbye_keywords = ["adiós", "adios", "chao", "cerrar", "terminar", "bye"]
     return any(keyword in message.lower() for keyword in goodbye_keywords)
 
 
+<<<<<<< HEAD
 # In[ ]:
 
 
+=======
+>>>>>>> 160be347e470d23eb1b28adc640c7c23d0494a52
 messages = []
 def chat(user_input):
     messages = [
@@ -64,6 +79,7 @@ def chat(user_input):
     return response.choices[0].message['content']
 
 
+<<<<<<< HEAD
 # In[ ]:
 
 
@@ -73,6 +89,8 @@ def chat(user_input):
 # In[ ]:
 
 
+=======
+>>>>>>> 160be347e470d23eb1b28adc640c7c23d0494a52
 st.title("Chat con ChatGPT-4o")
 response = openai.ChatCompletion.create(
   model="gpt-4o",
@@ -86,6 +104,7 @@ bot_response = response.choices[0].message['content']
 st.write(bot_response)
 
 
+<<<<<<< HEAD
 # In[ ]:
 
 
@@ -96,6 +115,11 @@ messages = [{"role": "user", "content": initial_message}]
 # In[ ]:
 
 
+=======
+initial_message = st.text_input("Ingrese su pregunta:", key="initial_message")
+messages = [{"role": "user", "content": initial_message}]
+
+>>>>>>> 160be347e470d23eb1b28adc640c7c23d0494a52
 if st.button("Enviar"):
     user_input = initial_message
 
@@ -106,6 +130,7 @@ if st.button("Enviar"):
 
     if is_goodbye(user_input):
         st.info("Chat terminado.")
+<<<<<<< HEAD
 
 
 # In[ ]:
@@ -113,3 +138,5 @@ if st.button("Enviar"):
 
 
 
+=======
+>>>>>>> 160be347e470d23eb1b28adc640c7c23d0494a52
